@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Sputnik
+Exec=webapp-container --inspector ./www/index.html
+Icon=sputnik.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+X-Ubuntu-Supported-Orientations=portrait

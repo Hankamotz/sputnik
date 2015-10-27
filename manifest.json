@@ -1,0 +1,17 @@
+{
+    "name": "sputnik.hankamotz",
+    "description": "guide sputnik around earth",
+    "architecture": "all",
+    "title": "Sputnik",
+    "hooks": {
+        "sputnik": {
+            "apparmor": "sputnik.apparmor",
+            "desktop":  "sputnik.desktop"
+        }
+    },
+    "version": "0.1",
+    "maintainer": "Andima Landaluze <andimalo@hotmail.es>",
+    "framework" : "ubuntu-sdk-15.04"
+}
+
+

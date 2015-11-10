@@ -9,7 +9,7 @@
             "desktop":  "sputnik.desktop"
         }
     },
-    "version": "0.1",
+    "version": "0.2",
     "maintainer": "Andima Landaluze <andimalo@hotmail.es>",
     "framework" : "ubuntu-sdk-15.04"
 }

@@ -1,10 +1,4 @@
 gdjs.jokoaCode = {};
-gdjs.jokoaCode.GDgurpilObjects1_1final = [];
-
-gdjs.jokoaCode.GDsputnikObjects1_1final = [];
-
-gdjs.jokoaCode.GDtxapaObjects1_1final = [];
-
 
 
 gdjs.jokoaCode.GDpauseObjects1= [];
@@ -34,18 +28,10 @@ gdjs.jokoaCode.GDoinarriObjects3= [];
 gdjs.jokoaCode.GDtapObjects1= [];
 gdjs.jokoaCode.GDtapObjects2= [];
 gdjs.jokoaCode.GDtapObjects3= [];
-gdjs.jokoaCode.GDfondoatzeanObjects1= [];
-gdjs.jokoaCode.GDfondoatzeanObjects2= [];
-gdjs.jokoaCode.GDfondoatzeanObjects3= [];
 
 gdjs.jokoaCode.conditionTrue_0 = {val:false};
 gdjs.jokoaCode.condition0IsTrue_0 = {val:false};
 gdjs.jokoaCode.condition1IsTrue_0 = {val:false};
-gdjs.jokoaCode.condition2IsTrue_0 = {val:false};
-gdjs.jokoaCode.conditionTrue_1 = {val:false};
-gdjs.jokoaCode.condition0IsTrue_1 = {val:false};
-gdjs.jokoaCode.condition1IsTrue_1 = {val:false};
-gdjs.jokoaCode.condition2IsTrue_1 = {val:false};
 
 gdjs.jokoaCode.func = function(runtimeScene, context) {
 context.startNewFrame();
@@ -76,9 +62,6 @@ gdjs.jokoaCode.GDoinarriObjects3.length = 0;
 gdjs.jokoaCode.GDtapObjects1.length = 0;
 gdjs.jokoaCode.GDtapObjects2.length = 0;
 gdjs.jokoaCode.GDtapObjects3.length = 0;
-gdjs.jokoaCode.GDfondoatzeanObjects1.length = 0;
-gdjs.jokoaCode.GDfondoatzeanObjects2.length = 0;
-gdjs.jokoaCode.GDfondoatzeanObjects3.length = 0;
 
 
 {
@@ -124,31 +107,10 @@ gdjs.jokoaCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.timerElapsedT
 
 {
 
-gdjs.jokoaCode.GDfondoatzeanObjects1.createFrom(runtimeScene.getObjects("fondoatzean"));
-
-{for(var i = 0, len = gdjs.jokoaCode.GDfondoatzeanObjects1.length ;i < len;++i) {
-    gdjs.jokoaCode.GDfondoatzeanObjects1[i].rotate(-2, runtimeScene);
-}
-}
-}
-
-
-{
-
 
 
 }
 
-
-{
-
-
-gdjs.jokoaCode.condition0IsTrue_0.val = false;
-{
-gdjs.jokoaCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.timerElapsedTime(runtimeScene, 0.5, "hasiera");
-}if (gdjs.jokoaCode.condition0IsTrue_0.val) {
-
-{ //Subevents
 
 {
 
@@ -159,11 +121,6 @@ gdjs.jokoaCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButtonPressed
 }if (gdjs.jokoaCode.condition0IsTrue_0.val) {
 {runtimeScene.getVariables().getFromIndex(0).setNumber(1);
 }}
-
-}
-
-} //End of subevents
-}
 
 }
 
@@ -274,205 +231,6 @@ gdjs.jokoaCode.GDsputnikObjects3.length = k;}if (gdjs.jokoaCode.condition0IsTrue
 
 } //End of subevents
 }
-
-}
-
-
-{
-
-gdjs.jokoaCode.GDsputnikObjects1.createFrom(runtimeScene.getObjects("sputnik"));
-
-gdjs.jokoaCode.condition0IsTrue_0.val = false;
-{
-for(var i = 0, k = 0, l = gdjs.jokoaCode.GDsputnikObjects1.length;i<l;++i) {
-    if ( gdjs.jokoaCode.GDsputnikObjects1[i].getX() <= 60 ) {
-        gdjs.jokoaCode.condition0IsTrue_0.val = true;
-        gdjs.jokoaCode.GDsputnikObjects1[k] = gdjs.jokoaCode.GDsputnikObjects1[i];
-        ++k;
-    }
-}
-gdjs.jokoaCode.GDsputnikObjects1.length = k;}if (gdjs.jokoaCode.condition0IsTrue_0.val) {
-{runtimeScene.getVariables().getFromIndex(4).setNumber(1);
-}{gdjs.evtTools.runtimeScene.unpauseTimer(runtimeScene, "left");
-}}
-
-}
-
-
-{
-
-gdjs.jokoaCode.GDsputnikObjects1.length = 0;
-gdjs.jokoaCode.GDtxapaObjects1.length = 0;
-
-gdjs.jokoaCode.condition0IsTrue_0.val = false;
-{
-{gdjs.jokoaCode.conditionTrue_1 = gdjs.jokoaCode.condition0IsTrue_0;
-gdjs.jokoaCode.GDsputnikObjects1_1final.length = 0;gdjs.jokoaCode.GDtxapaObjects1_1final.length = 0;gdjs.jokoaCode.condition0IsTrue_1.val = false;
-gdjs.jokoaCode.condition1IsTrue_1.val = false;
-{
-gdjs.jokoaCode.GDsputnikObjects2.createFrom(runtimeScene.getObjects("sputnik"));
-for(var i = 0, k = 0, l = gdjs.jokoaCode.GDsputnikObjects2.length;i<l;++i) {
-    if ( gdjs.jokoaCode.GDsputnikObjects2[i].getX() > 60 ) {
-        gdjs.jokoaCode.condition0IsTrue_1.val = true;
-        gdjs.jokoaCode.GDsputnikObjects2[k] = gdjs.jokoaCode.GDsputnikObjects2[i];
-        ++k;
-    }
-}
-gdjs.jokoaCode.GDsputnikObjects2.length = k;if( gdjs.jokoaCode.condition0IsTrue_1.val ) {
-    gdjs.jokoaCode.conditionTrue_1.val = true;
-    for(var j = 0, jLen = gdjs.jokoaCode.GDsputnikObjects2.length;j<jLen;++j) {
-        if ( gdjs.jokoaCode.GDsputnikObjects1_1final.indexOf(gdjs.jokoaCode.GDsputnikObjects2[j]) === -1 )
-            gdjs.jokoaCode.GDsputnikObjects1_1final.push(gdjs.jokoaCode.GDsputnikObjects2[j]);
-    }
-}
-}
-{
-gdjs.jokoaCode.GDtxapaObjects2.createFrom(runtimeScene.getObjects("txapa"));
-for(var i = 0, k = 0, l = gdjs.jokoaCode.GDtxapaObjects2.length;i<l;++i) {
-    if ( gdjs.jokoaCode.GDtxapaObjects2[i].getX() == 60 ) {
-        gdjs.jokoaCode.condition1IsTrue_1.val = true;
-        gdjs.jokoaCode.GDtxapaObjects2[k] = gdjs.jokoaCode.GDtxapaObjects2[i];
-        ++k;
-    }
-}
-gdjs.jokoaCode.GDtxapaObjects2.length = k;if( gdjs.jokoaCode.condition1IsTrue_1.val ) {
-    gdjs.jokoaCode.conditionTrue_1.val = true;
-    for(var j = 0, jLen = gdjs.jokoaCode.GDtxapaObjects2.length;j<jLen;++j) {
-        if ( gdjs.jokoaCode.GDtxapaObjects1_1final.indexOf(gdjs.jokoaCode.GDtxapaObjects2[j]) === -1 )
-            gdjs.jokoaCode.GDtxapaObjects1_1final.push(gdjs.jokoaCode.GDtxapaObjects2[j]);
-    }
-}
-}
-{
-gdjs.jokoaCode.GDsputnikObjects1.createFrom(gdjs.jokoaCode.GDsputnikObjects1_1final);
-gdjs.jokoaCode.GDtxapaObjects1.createFrom(gdjs.jokoaCode.GDtxapaObjects1_1final);
-}
-}
-}if (gdjs.jokoaCode.condition0IsTrue_0.val) {
-{runtimeScene.getVariables().getFromIndex(4).setNumber(0);
-}{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "left");
-}}
-
-}
-
-
-{
-
-
-gdjs.jokoaCode.condition0IsTrue_0.val = false;
-{
-gdjs.jokoaCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.timerElapsedTime(runtimeScene, 3, "left");
-}if (gdjs.jokoaCode.condition0IsTrue_0.val) {
-
-{ //Subevents
-
-{
-
-gdjs.jokoaCode.GDtxapaObjects2.length = 0;
-
-gdjs.jokoaCode.condition0IsTrue_0.val = false;
-{
-gdjs.jokoaCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().getFromIndex(4)) == 1;
-}if (gdjs.jokoaCode.condition0IsTrue_0.val) {
-{gdjs.evtTools.object.createObjectOnScene(runtimeScene, context.clearEventsObjectsMap().addObjectsToEventsMap("txapa", gdjs.jokoaCode.GDtxapaObjects2).getEventsObjectsMap(), 60, 0, "juego");
-}}
-
-}
-
-} //End of subevents
-}
-
-}
-
-
-{
-
-gdjs.jokoaCode.GDsputnikObjects1.createFrom(runtimeScene.getObjects("sputnik"));
-
-gdjs.jokoaCode.condition0IsTrue_0.val = false;
-{
-for(var i = 0, k = 0, l = gdjs.jokoaCode.GDsputnikObjects1.length;i<l;++i) {
-    if ( gdjs.jokoaCode.GDsputnikObjects1[i].getX() >= 660 ) {
-        gdjs.jokoaCode.condition0IsTrue_0.val = true;
-        gdjs.jokoaCode.GDsputnikObjects1[k] = gdjs.jokoaCode.GDsputnikObjects1[i];
-        ++k;
-    }
-}
-gdjs.jokoaCode.GDsputnikObjects1.length = k;}if (gdjs.jokoaCode.condition0IsTrue_0.val) {
-{runtimeScene.getVariables().getFromIndex(5).setNumber(1);
-}{gdjs.evtTools.runtimeScene.unpauseTimer(runtimeScene, "right");
-}}
-
-}
-
-
-{
-
-gdjs.jokoaCode.GDgurpilObjects1.length = 0;
-gdjs.jokoaCode.GDsputnikObjects1.length = 0;
-
-gdjs.jokoaCode.condition0IsTrue_0.val = false;
-{
-{gdjs.jokoaCode.conditionTrue_1 = gdjs.jokoaCode.condition0IsTrue_0;
-gdjs.jokoaCode.GDgurpilObjects1_1final.length = 0;gdjs.jokoaCode.GDsputnikObjects1_1final.length = 0;gdjs.jokoaCode.condition0IsTrue_1.val = false;
-gdjs.jokoaCode.condition1IsTrue_1.val = false;
-{
-gdjs.jokoaCode.GDsputnikObjects2.createFrom(runtimeScene.getObjects("sputnik"));
-for(var i = 0, k = 0, l = gdjs.jokoaCode.GDsputnikObjects2.length;i<l;++i) {
-    if ( gdjs.jokoaCode.GDsputnikObjects2[i].getX() < 660 ) {
-        gdjs.jokoaCode.condition0IsTrue_1.val = true;
-        gdjs.jokoaCode.GDsputnikObjects2[k] = gdjs.jokoaCode.GDsputnikObjects2[i];
-        ++k;
-    }
-}
-gdjs.jokoaCode.GDsputnikObjects2.length = k;if( gdjs.jokoaCode.condition0IsTrue_1.val ) {
-    gdjs.jokoaCode.conditionTrue_1.val = true;
-    for(var j = 0, jLen = gdjs.jokoaCode.GDsputnikObjects2.length;j<jLen;++j) {
-        if ( gdjs.jokoaCode.GDsputnikObjects1_1final.indexOf(gdjs.jokoaCode.GDsputnikObjects2[j]) === -1 )
-            gdjs.jokoaCode.GDsputnikObjects1_1final.push(gdjs.jokoaCode.GDsputnikObjects2[j]);
-    }
-}
-}
-{
-gdjs.jokoaCode.GDgurpilObjects2.createFrom(runtimeScene.getObjects("gurpil"));
-for(var i = 0, k = 0, l = gdjs.jokoaCode.GDgurpilObjects2.length;i<l;++i) {
-    if ( gdjs.jokoaCode.GDgurpilObjects2[i].getX() == 660 ) {
-        gdjs.jokoaCode.condition1IsTrue_1.val = true;
-        gdjs.jokoaCode.GDgurpilObjects2[k] = gdjs.jokoaCode.GDgurpilObjects2[i];
-        ++k;
-    }
-}
-gdjs.jokoaCode.GDgurpilObjects2.length = k;if( gdjs.jokoaCode.condition1IsTrue_1.val ) {
-    gdjs.jokoaCode.conditionTrue_1.val = true;
-    for(var j = 0, jLen = gdjs.jokoaCode.GDgurpilObjects2.length;j<jLen;++j) {
-        if ( gdjs.jokoaCode.GDgurpilObjects1_1final.indexOf(gdjs.jokoaCode.GDgurpilObjects2[j]) === -1 )
-            gdjs.jokoaCode.GDgurpilObjects1_1final.push(gdjs.jokoaCode.GDgurpilObjects2[j]);
-    }
-}
-}
-{
-gdjs.jokoaCode.GDgurpilObjects1.createFrom(gdjs.jokoaCode.GDgurpilObjects1_1final);
-gdjs.jokoaCode.GDsputnikObjects1.createFrom(gdjs.jokoaCode.GDsputnikObjects1_1final);
-}
-}
-}if (gdjs.jokoaCode.condition0IsTrue_0.val) {
-{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "right");
-}{runtimeScene.getVariables().getFromIndex(5).setNumber(0);
-}}
-
-}
-
-
-{
-
-gdjs.jokoaCode.GDgurpilObjects1.length = 0;
-
-gdjs.jokoaCode.condition0IsTrue_0.val = false;
-{
-gdjs.jokoaCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.timerElapsedTime(runtimeScene, 3, "right");
-}if (gdjs.jokoaCode.condition0IsTrue_0.val) {
-{gdjs.evtTools.object.createObjectOnScene(runtimeScene, context.clearEventsObjectsMap().addObjectsToEventsMap("gurpil", gdjs.jokoaCode.GDgurpilObjects1).getEventsObjectsMap(), 660, 0, "juego");
-}}
 
 }
 
@@ -793,7 +551,7 @@ gdjs.jokoaCode.condition0IsTrue_0.val = false;
 gdjs.jokoaCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().getFromIndex(2)) > 30;
 }if (gdjs.jokoaCode.condition0IsTrue_0.val) {
 {for(var i = 0, len = gdjs.jokoaCode.GDtorlojuObjects1.length ;i < len;++i) {
-    gdjs.jokoaCode.GDtorlojuObjects1[i].addForce(0, 50, 0);
+    gdjs.jokoaCode.GDtorlojuObjects1[i].addForce(0, 205, 0);
 }
 }
 { //Subevents
@@ -826,7 +584,7 @@ gdjs.jokoaCode.condition0IsTrue_0.val = false;
 gdjs.jokoaCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().getFromIndex(2)) > 45;
 }if (gdjs.jokoaCode.condition0IsTrue_0.val) {
 {for(var i = 0, len = gdjs.jokoaCode.GDgurpilObjects1.length ;i < len;++i) {
-    gdjs.jokoaCode.GDgurpilObjects1[i].addForce(0, 50, 0);
+    gdjs.jokoaCode.GDgurpilObjects1[i].addForce(0, 208, 0);
 }
 }
 { //Subevents
@@ -859,7 +617,7 @@ gdjs.jokoaCode.condition0IsTrue_0.val = false;
 gdjs.jokoaCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().getFromIndex(2)) > 60;
 }if (gdjs.jokoaCode.condition0IsTrue_0.val) {
 {for(var i = 0, len = gdjs.jokoaCode.GDkonoObjects1.length ;i < len;++i) {
-    gdjs.jokoaCode.GDkonoObjects1[i].addForce(0, 50, 0);
+    gdjs.jokoaCode.GDkonoObjects1[i].addForce(0, 150, 0);
 }
 }
 { //Subevents
@@ -892,7 +650,7 @@ gdjs.jokoaCode.condition0IsTrue_0.val = false;
 gdjs.jokoaCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().getFromIndex(2)) > 90;
 }if (gdjs.jokoaCode.condition0IsTrue_0.val) {
 {for(var i = 0, len = gdjs.jokoaCode.GDtxapaObjects1.length ;i < len;++i) {
-    gdjs.jokoaCode.GDtxapaObjects1[i].addForce(0, 50, 0);
+    gdjs.jokoaCode.GDtxapaObjects1[i].addForce(0, 180, 0);
 }
 }
 { //Subevents
@@ -925,7 +683,7 @@ gdjs.jokoaCode.condition0IsTrue_0.val = false;
 gdjs.jokoaCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().getFromIndex(2)) > 120;
 }if (gdjs.jokoaCode.condition0IsTrue_0.val) {
 {for(var i = 0, len = gdjs.jokoaCode.GDtorlojuObjects1.length ;i < len;++i) {
-    gdjs.jokoaCode.GDtorlojuObjects1[i].addForce(0, 50, 0);
+    gdjs.jokoaCode.GDtorlojuObjects1[i].addForce(0, 225, 0);
 }
 }
 { //Subevents
@@ -958,7 +716,7 @@ gdjs.jokoaCode.condition0IsTrue_0.val = false;
 gdjs.jokoaCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().getFromIndex(2)) > 150;
 }if (gdjs.jokoaCode.condition0IsTrue_0.val) {
 {for(var i = 0, len = gdjs.jokoaCode.GDgurpilObjects1.length ;i < len;++i) {
-    gdjs.jokoaCode.GDgurpilObjects1[i].addForce(0, 50, 0);
+    gdjs.jokoaCode.GDgurpilObjects1[i].addForce(0, 220, 0);
 }
 }
 { //Subevents
@@ -992,10 +750,10 @@ gdjs.jokoaCode.condition0IsTrue_0.val = false;
 gdjs.jokoaCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().getFromIndex(2)) > 180;
 }if (gdjs.jokoaCode.condition0IsTrue_0.val) {
 {for(var i = 0, len = gdjs.jokoaCode.GDtxapaObjects1.length ;i < len;++i) {
-    gdjs.jokoaCode.GDtxapaObjects1[i].addForce(0, 50, 0);
+    gdjs.jokoaCode.GDtxapaObjects1[i].addForce(0, 200, 0);
 }
 }{for(var i = 0, len = gdjs.jokoaCode.GDkonoObjects1.length ;i < len;++i) {
-    gdjs.jokoaCode.GDkonoObjects1[i].addForce(0, 50, 0);
+    gdjs.jokoaCode.GDkonoObjects1[i].addForce(0, 180, 0);
 }
 }
 { //Subevents
